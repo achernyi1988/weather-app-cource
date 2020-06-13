@@ -38,11 +38,13 @@ const getWeather =(latitude, longitude, callback)  => {
 
          // log(response.data.current.weather_descriptions[0]);
          const {location} = data
-         const {weather_descriptions, temperature} = data.current
-         
+         const {weather_descriptions, temperature, humidity} = data.current
+
+
          callback(undefined, {location,
              weather_descriptions : weather_descriptions[0],
-             temperature : temperature})
+             temperature : temperature,
+            humidity})
 
       }).catch(error => {
          callback(error, undefined)

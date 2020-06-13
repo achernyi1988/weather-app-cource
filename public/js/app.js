@@ -11,7 +11,7 @@ const searchText = document.querySelector("input")
 const messageOne = document.querySelector("#message-1")
 
 const messageTwo = document.querySelector("#message-2")
-
+const messageThree = document.querySelector("#message-3")
 //messageOne.textContent = "Hi"
 //context
 
@@ -26,6 +26,7 @@ searchForm.addEventListener(('submit'), (e) => {
 
    messageOne.textContent = "loading..."
    messageTwo.textContent = ""
+   messageThree.textContent = ""  
 
    fetch("/weather?address=" + address)
       .then((response) => response.json()
@@ -34,9 +35,12 @@ searchForm.addEventListener(('submit'), (e) => {
             if (data.err) {
                messageOne.textContent = data.err
                messageTwo.textContent = ""
+               messageThree.textContent = ""  
             } else {
-               messageOne.textContent = data.temperature
-               messageTwo.textContent = data.weather_descriptions
+               messageOne.textContent = "temperature: " + data.temperature
+               messageTwo.textContent = "descriptions: " + data.weather_descriptions
+               messageThree.textContent = "humidity: " + data.humidity
+               
             }
          })).catch((err)=>{
             console.log(err)
