@@ -1,5 +1,5 @@
 const axios = require('axios');
-const { log, log_err, log_warn } = require("../../utils/logs")
+const { log, log_err, log_warn } = require("../utils/logs")
 
 const geocode = (address, callback) =>{
    //const name_param  = address.replace(/\s+/g, '%20')

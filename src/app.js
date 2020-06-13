@@ -1,4 +1,4 @@
-const { log, log_err, log_warn } = require("../../utils/logs")
+const { log, log_err, log_warn } = require("../utils/logs")
 const { geocode, getWeather } = require("../api/api")
 
 const path = require("path")
