@@ -2,7 +2,7 @@
 
 //import {log} from "../../../utils/logs"
 
-console.log("JS says hello")
+console.log("JS says hello heroku")
 
 const searchForm = document.querySelector("form")
 
